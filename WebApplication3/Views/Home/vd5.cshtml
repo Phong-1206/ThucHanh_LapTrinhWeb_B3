@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VD 5</title>
+    <script>
+        function Respond()
+        {
+            console.log("hi");
+            var check = document.getElementsByName("checkbox");
+            @*console.log(check[0]);*@
+            if (check[0].checked == true) {
+                document.getElementById("huflit").innerHTML = " Toi la sinh vien Huflit";
+
+            };
+            if (check[1].checked == true) {
+                document.getElementById("huflit").innerHTML = " Toi khong phai la sinh vien Huflit";
+            };
+        }
+    </script>
+</head>
+<body>
+    <div>
+    <input type="radio" name="checkbox" />Phai
+    <br />
+    <input type="radio" name="checkbox" /> Khong
+    <br/>
+    <input type="submit" value="Cau tra loi" onclick="Respond();"/>
+    <br/>
+    <span id="huflit"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VD 5</title>
+    <script>
+        function check()
+        {
+            var checkbox = document.getElementsByName("nutchon");
+            var giatri = ""
+            for (let i = 0; i < checkbox.length; i++)
+            {
+                if (checkbox[i].checked == true)
+                {
+                    giatri += " ["+checkbox[i].value + "]"
+                }
+            }
+            alert(giatri);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="checkbox" name="nutchon" value="Di choi" /> <label> Di choi </label><br />
+        <input type="checkbox" name="nutchon" value="Di du lich" /><label> Di du lich </label><br />
+        <input type="checkbox" name="nutchon" value="Di an" /><label> Di an </label><br />
+        <input type="checkbox" name="nutchon" value="Di sieu thi" /><label> Di sieu thi </label><br />
+        <input type="checkbox" name="nutchon" value="Di lap trinh" /><label> Di lap trinh </label><br />
+        <input type="checkbox" name="nutchon" value="O nha" /><label> O nha </label><br />
+        <input type="submit" onclick="check();" value="Kiem tra" />
+    </div>
+</body>
+</html>
